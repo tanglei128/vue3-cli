@@ -1,0 +1,7 @@
+{
+  "recommendations": ["Vue.volar"],
+  "cody.autocomplete.experimental.ollamaOptions":{
+    "url":"http://172.16.12.243:11434",
+    "model":"gemma"
+  },
+}
