@@ -9,22 +9,22 @@
 </template>
 
 <script  setup>
-import { ref, onMounted } from 'vue'
+
+import { ref, onMounted,watch } from 'vue'
 import { RouterView, useRouter,  } from 'vue-router'
 const router = useRouter()
 const activeIndex = ref(null)
 const menuList = ref([
-    { index: '1', name: 'GET', url: '/get' },
-    { index: '2', name: 'POST', url: '/post' },
-    { index: '3', name: 'File Upload', url: '/file-upload' },
-    { index: '4', name: 'JSON View', url: '/json-view' },
+    { index: '1', name: 'GET', url: '/restful/get' },
+    { index: '2', name: 'POST', url: '/restful/post' },
+    { index: '3', name: 'File Upload', url: '/restful/file-upload' },
+    { index: '4', name: 'JSON View', url: '/restful/json-view' },
 ])
 
 const handleSelect = (key, keyPath) => {
-
     router.push(menuList.value[key - 1].url)
 }
-onMounted(() => {
+const refreshRouter = () => {
     //获取当前路由地址
     // 例如：/get
     const currentPath = router.currentRoute.value.path
@@ -35,6 +35,13 @@ onMounted(() => {
         activeIndex.value = String(index + 1)
         console.log(activeIndex.value)
     }
+}
+onMounted(() => {
+    refreshRouter();
+})
+//监听路由变化
+watch(router.currentRoute, (to, from) => {
+    refreshRouter();
 })
 </script>
 <style scoped>

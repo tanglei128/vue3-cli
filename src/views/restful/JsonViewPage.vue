@@ -5,7 +5,7 @@
 <script setup>
 import { ref } from 'vue';
 import JsonViewEditor from '@/components/JsonViewEditor.vue';
-const jsonResult = ref(null);
+const jsonResult = ref('null');
 
 </script>
 
