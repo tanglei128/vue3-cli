@@ -36,6 +36,22 @@ const router = createRouter({
               component: () => import('../views/restful/JsonViewPage.vue')
             }
           ]
+        },{
+          path: 'split-file',
+          name: 'SplitFile',
+          component: () => import('@/components/Layout.vue'),
+          children: [
+            {
+              path: 'download',
+              name: 'FileDownload',
+              component: () => import('../views/SplitFile/download/index.vue')
+            },
+            {
+              path: 'upload',
+              name: 'FileUpload',
+              component: () => import('../views/SplitFile/upload/index.vue')
+            },
+          ]
         }  
       ]
     }

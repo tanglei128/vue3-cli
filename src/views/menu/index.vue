@@ -13,8 +13,12 @@
             <el-icon><location /></el-icon>
             <span>文件分片</span>
           </template>
-          <el-menu-item index="1-1">分片上传</el-menu-item>
-          <el-menu-item index="1-2">分片下载</el-menu-item>
+          <el-menu-item index="1-1">
+            <RouterLink to="/split-file/upload">分片上传</RouterLink>
+          </el-menu-item>
+          <el-menu-item index="1-2">
+            <RouterLink to="/split-file/download">分片下载</RouterLink>
+          </el-menu-item>
         </el-sub-menu>
         <el-menu-item index="2">
           <el-icon><icon-menu /></el-icon>
