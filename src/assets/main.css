@@ -6,7 +6,9 @@
   /* padding: 2rem; */
   font-weight: normal;
 }
-
+body{
+  overflow: hidden;
+}
 a,
 .green {
   text-decoration: none;

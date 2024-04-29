@@ -11,10 +11,10 @@
         <el-sub-menu index="1">
           <template #title>
             <el-icon><location /></el-icon>
-            <span>Navigator One</span>
+            <span>文件分片</span>
           </template>
-          <el-menu-item index="1-1">item one</el-menu-item>
-          <el-menu-item index="1-2">item one</el-menu-item>
+          <el-menu-item index="1-1">分片上传</el-menu-item>
+          <el-menu-item index="1-2">分片下载</el-menu-item>
         </el-sub-menu>
         <el-menu-item index="2">
           <el-icon><icon-menu /></el-icon>
@@ -22,13 +22,13 @@
             <RouterLink to="/restful/">Restful 测试</RouterLink>
           </span>
         </el-menu-item>
-        <el-menu-item index="3" disabled>
+        <el-menu-item index="3">
           <el-icon><document /></el-icon>
-          <span>Navigator Three</span>
+          <span>组件封装</span>
         </el-menu-item>
         <el-menu-item index="4">
           <el-icon><setting /></el-icon>
-          <span>Navigator Four</span>
+          <span>动画</span>
         </el-menu-item>
       </el-menu>
       </el-aside>
